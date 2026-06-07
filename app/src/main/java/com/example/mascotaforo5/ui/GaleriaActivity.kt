@@ -18,6 +18,14 @@ import com.example.mascotaforo5.R
 import com.example.mascotaforo5.adapter.MascotaAdapter
 import com.example.mascotaforo5.data.repository.TiendaRepository
 
+/**
+ * Actividad que funciona como una galería interactiva, combinando un catálogo visual con un reproductor de video.
+ * * * Utiliza un [RecyclerView] configurado con [MascotaAdapter] para listar las mascotas disponibles.
+ * * Implementa [ExoPlayer] para gestionar y reproducir los videos locales (desde la carpeta res/raw o res/drawable)
+ * asociados a cada animal seleccionado.
+ * * Maneja de forma segura el ciclo de vida del reproductor, garantizando que se libere la memoria RAM
+ * mediante el método [onDestroy] cuando la pantalla se cierra.
+ */
 class GaleriaActivity : AppCompatActivity() {
     private lateinit var playerView: PlayerView
     private var exoPlayer: ExoPlayer? = null

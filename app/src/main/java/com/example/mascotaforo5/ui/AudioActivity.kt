@@ -13,6 +13,14 @@ import com.example.mascotaforo5.R
 import com.example.mascotaforo5.adapter.CuidadoAdapter
 import com.example.mascotaforo5.data.repository.TiendaRepository
 
+/**
+ * Actividad encargada de mostrar la lista de recomendaciones y gestionar la reproducción de audio.
+ *
+ * * Configura un RecyclerView usando [CuidadoAdapter] para mostrar los datos obtenidos desde [TiendaRepository].
+ * * Controla la instancia de [MediaPlayer] para reproducir y detener los sonidos.
+ * * Maneja de forma segura el ciclo de vida de los recursos multimedia, asegurando que se liberen
+ * de la memoria RAM ([detenerAudio], [onDestroy]) cuando ya no son necesarios o la pantalla se cierra.
+ */
 class AudioActivity : AppCompatActivity() {
 
     private var mediaPlayer: MediaPlayer? = null

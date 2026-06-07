@@ -11,6 +11,15 @@ import com.example.mascotaforo5.R
 import com.example.mascotaforo5.data.model.Producto
 import com.example.mascotaforo5.ui.ProductoDetalleActivity
 
+/**
+ * Adaptador encargado de mostrar un catálogo de productos en un RecyclerView.
+ * * Enlaza la información de cada [Producto] (nombre, precio e imagen) con su representación
+ * visual en [R.layout.item_producto]. Además, este adaptador gestiona su propia lógica
+ * de navegación: al hacer clic en un ítem, lanza directamente [ProductoDetalleActivity]
+ * pasando los detalles del producto a través de un Intent.
+ *
+ * @property productos Lista de objetos de tipo [Producto] que se van a listar.
+ */
 class ProductoAdapter(private val productos: List<Producto>) : RecyclerView.Adapter<ProductoAdapter.ProductoViewHolder>() {
 
     class ProductoViewHolder(view: View) : RecyclerView.ViewHolder(view) {

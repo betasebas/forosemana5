@@ -4,7 +4,16 @@ import com.example.mascotaforo5.data.model.CuidadoMascota
 import com.example.mascotaforo5.data.model.Mascota
 import com.example.mascotaforo5.data.model.Producto
 
+/**
+ * Repositorio central que actúa como la fuente de datos (Single Source of Truth) de la aplicación.
+ * * * Se encarga de proveer la información necesaria para las distintas secciones de la tienda, aislando
+ * la lógica de creación y obtención de datos del resto de la arquitectura (ViewModels y Activities).
+ * * En esta iteración, suministra listas estáticas (mock data) simulando el comportamiento de
+ * una base de datos local o una consulta a un servidor externo.
+ */
 class TiendaRepository {
+
+    /** Obtiene una lista de productos relacionados con mascotas*/
     fun obtenerProductos(): List<Producto> {
         return listOf(
             Producto(1, "Alimento Premium Perros", "Bolsa de 10kg de alta proteína", 125000.0, R.drawable.comida_perro),
@@ -14,14 +23,15 @@ class TiendaRepository {
         )
     }
 
+    /** Obtiene una lista de mascotas con imagenes y su respectivo video*/
     fun obtenerMascotas(): List<Mascota> {
         return listOf(
-            Mascota(1, "Max", "Golden Retriever", "3 meses", R.drawable.mascota_max, R.raw.video_mascota),
-            Mascota(2, "Luna", "Gato Persa", "1 año", R.drawable.mascota_luna, R.raw.video_mascota),
-            Mascota(3, "Rocky", "Bulldog Francés", "6 meses", R.drawable.mascota_kevin, R.raw.video_mascota)
+            Mascota(1, "Max", "Golden Retriever", "3 meses", R.drawable.mascota_max, R.raw.golden_video),
+            Mascota(2, "Luna", "Gato Persa", "1 año", R.drawable.mascota_luna, R.raw.persa_video),
+            Mascota(3, "Rocky", "Bulldog Francés", "6 meses", R.drawable.mascota_kevin, R.raw.bulldog_video)
         )
     }
-
+    /** Obtiene una lista de mascotas  y su respectivo audio de cuidados, Por tiempo se uso el mismo audio para todsas*/
     fun obtenerAudiosCuidado(): List<CuidadoMascota> {
         return listOf(
             CuidadoMascota(1, "Cuidados del cachorro", "Aprende lo básico para los primeros meses", R.raw.audio_cuidado),

@@ -9,6 +9,16 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.mascotaforo5.data.model.Mascota
 import com.example.mascotaforo5.R
 
+/**
+ * Adaptador encargado de gestionar y mostrar el catálogo o lista de mascotas en un RecyclerView.
+ * * Se encarga de enlazar la información de cada animal (imagen, nombre, raza y edad combinadas)
+ * con el diseño visual de [R.layout.item_mascota].
+ *
+ * @property mascotas Lista de objetos de tipo [Mascota] que se representarán en la pantalla.
+ * @property onMascotaClick Función lambda (callback) que se dispara cuando el usuario toca
+ * la tarjeta de una mascota. Retorna el objeto [Mascota] completo, ideal para navegar a
+ * una pantalla de detalles.
+ */
 class MascotaAdapter(
     private val mascotas: List<Mascota>,
     private val onMascotaClick: (Mascota) -> Unit

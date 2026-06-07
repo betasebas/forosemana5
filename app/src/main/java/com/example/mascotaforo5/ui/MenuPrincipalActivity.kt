@@ -7,9 +7,18 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.mascotaforo5.MainActivity
+import com.example.mascotaforo5.ui.main.MainActivity
 import com.example.mascotaforo5.R
 
+/**
+ * Actividad principal que funciona como el menú de inicio y centro de navegación de la aplicación.
+ * * Contiene los accesos directos a las diferentes secciones del proyecto:
+ * - Catálogo de productos ([MainActivity]).
+ * - Galería de mascotas con video ([GaleriaActivity]).
+ * - Sección de recomendaciones en audio ([AudioActivity]).
+ * * * Utiliza [Intent] explícitos para gestionar el enrutamiento y lanzar las nuevas pantallas
+ * según la selección del usuario.
+ */
 class MenuPrincipalActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

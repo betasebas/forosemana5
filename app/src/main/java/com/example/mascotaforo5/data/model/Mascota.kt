@@ -1,5 +1,6 @@
 package com.example.mascotaforo5.data.model
 
+/** Modelo que representa una mascota*/
 data class Mascota(
     val id: Int,
     val nombre: String,

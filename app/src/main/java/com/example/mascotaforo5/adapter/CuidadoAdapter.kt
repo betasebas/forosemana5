@@ -8,6 +8,16 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.mascotaforo5.data.model.CuidadoMascota
 import com.example.mascotaforo5.R
 
+/**
+ * Adaptador para gestionar y mostrar la lista de cuidados de mascotas en un RecyclerView.
+ * * Se encarga de inflar el diseño visual ([R.layout.item_audio]) y enlazar los datos
+ * de cada cuidado (título y descripción). También maneja la interacción del usuario,
+ * delegando el evento de clic para reproducir el audio correspondiente.
+ *
+ * @property cuidados Lista de datos de tipo [CuidadoMascota] que se van a mostrar.
+ * @property onAudioClick Función lambda (callback) que se dispara cuando el usuario toca
+ * un elemento de la lista. Retorna el ID del recurso de audio (`audioResId`).
+ */
 class CuidadoAdapter(
     private val cuidados: List<CuidadoMascota>,
     private val onAudioClick: (Int) -> Unit

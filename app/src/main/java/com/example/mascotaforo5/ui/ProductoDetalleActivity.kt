@@ -10,6 +10,14 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.mascotaforo5.R
 
+/**
+ * Actividad encargada de mostrar la información detallada de un producto seleccionado.
+ * * * Esta pantalla no solicita datos a una base de datos o repositorio, sino que recibe
+ * toda la información necesaria (nombre, descripción, precio e imagen) directamente
+ * a través de los "extras" del [Intent] que la inició.
+ * * Una vez extraídos los datos, los asigna a las vistas correspondientes en [R.layout.activity_producto_detalle]
+ * y provee un mecanismo para volver al catálogo anterior cerrando su propia instancia.
+ */
 class ProductoDetalleActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
